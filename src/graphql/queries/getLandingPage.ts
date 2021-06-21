@@ -21,13 +21,25 @@ fragment header on LandingPage {
   }
 }
 
-fragment sectionAboutProject on LandingPage{
-  sectionAboutProject{
+fragment sectionAboutProject on LandingPage {
+  sectionAboutProject {
     title
     description
-    image{
+    image {
       alternativeText
       url
+    }
+  }
+}
+
+fragment sectionTech on LandingPage {
+  sectionTech {
+    title
+    techIcons {
+      title
+      icon {
+        url
+      }
     }
   }
 }
@@ -37,9 +49,9 @@ query GET_LANDING_PAGE {
     ...logo
     ...header
     ...sectionAboutProject
+    ...sectionTech
   }
 }
-
 
 `
 export default GET_LANDING_PAGE
