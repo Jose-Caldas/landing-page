@@ -1,7 +1,7 @@
 export type TechIcon = {
   title: string
   icon: {
-    url: string
+     url: string
   }
 }
 
